@@ -1,0 +1,140 @@
+{
+ "title": "The Strategic Narrative Diagnostic",
+ "description": "20 Years of Executive Coaching Insights summarized in 10 questions.",
+ "pages": [
+  {
+   "name": "narrative_instincts",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "opening",
+     "title": "1. You're starting a high-stakes presentation. What's your first move?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Walk through the agenda to manage expectations." },
+      { "value": 3, "text": "Start with a joke or a light-hearted icebreaker." },
+      { "value": 5, "text": "Share a 'Moment of Crisis' or a surprising insight that challenges the status quo." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "conflict",
+     "title": "2. A project failed. How do you present this to the Board?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Focus on the external factors and market conditions that caused it." },
+      { "value": 5, "text": "Identify the specific 'Turning Point' where a decision failed and what we learned." },
+      { "value": 3, "text": "Gloss over it quickly to get to the 'positive' forward-looking KPIs." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "hero",
+     "title": "3. Who is the central character (the hero) of your typical sales pitch or strategy deck?",
+     "isRequired": true,
+     "choices": [
+      { "value": 3, "text": "Our team—highlighting our expertise and track record." },
+      { "value": 5, "text": "The client/customer—navigating a world of change." },
+      { "value": 1, "text": "The product or data—the facts should speak for themselves." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "data",
+     "title": "4. How do you handle complex data on a slide?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Show the full spreadsheet/chart so the audience can see the 'full picture'." },
+      { "value": 5, "text": "Simplify the visual to highlight a single, undeniable 'headline' insight." },
+      { "value": 3, "text": "Keep the data as is, but talk over it with a completely different story." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "brevity",
+     "title": "5. You are told your 20-minute slot has been cut to 5 minutes. What do you do?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Talk faster to cover all the slides." },
+      { "value": 3, "text": "Skip to the final 'Conclusion' and 'Thank You' slides." },
+      { "value": 5, "text": "Ditch the deck and tell one story that embodies the main goal." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "resistance",
+     "title": "6. A senior leader interrupts your story with a cynical question. How do you react?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Provide more data immediately to prove them wrong." },
+      { "value": 5, "text": "Acknowledge the validity of their doubt and integrate it into the story." },
+      { "value": 3, "text": "Politely ask to hold all questions until the end." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "emotion",
+     "title": "7. How much 'emotion' or personal anecdote belongs in a technical business case?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "None. Business decisions must be purely rational." },
+      { "value": 5, "text": "Significant. People decide on emotion and justify with logic." },
+      { "value": 3, "text": "A little, but only if it's a 'safe' or common corporate example." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "call_to_action",
+     "title": "8. How do you usually end a presentation?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "A slide that says 'Questions?'" },
+      { "value": 3, "text": "A summary of the points already discussed." },
+      { "value": 5, "text": "A 'Call to Adventure'—a clear, vivid description of the next step." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "analogies",
+     "title": "9. When explaining a complex new technology, what is your go-to method?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Using the correct technical terminology to ensure precision." },
+      { "value": 5, "text": "Using an analogy (e.g., 'It’s like an Uber for X')." },
+      { "value": 3, "text": "Showing a diagram of the architecture." }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "preparation",
+     "title": "10. How do you rehearse for a presentation?",
+     "isRequired": true,
+     "choices": [
+      { "value": 1, "text": "Reading through my speaker notes several times." },
+      { "value": 3, "text": "Focusing on the transitions between slides." },
+      { "value": 5, "text": "Recording myself to check for 'filler words' and emotional resonance." }
+     ]
+    }
+   ]
+  }
+ ],
+ "completedHtml": "<h3>Your Narrative DNA: {archetype}</h3><p>Total Mastery Score: <b>{totalScore} / 50</b></p><hr/><h4>Core Shortcomings Identified:</h4><ul>{improvementList}</ul><hr/><h4>Your Strategic Growth Goal:</h4><p><b>{strategicGoal}</b></p>",
+ "calculatedValues": [
+  {
+   "name": "totalScore",
+   "expression": "{opening} + {conflict} + {hero} + {data} + {brevity} + {resistance} + {emotion} + {call_to_action} + {analogies} + {preparation}"
+  },
+  {
+   "name": "archetype",
+   "expression": "iif({totalScore} <= 20, 'The Subject Matter Expert', iif({totalScore} <= 35, 'The Polished Presenter', 'The Strategic Influencer'))"
+  },
+  {
+   "name": "improvementList",
+   "expression": "iif({totalScore} <= 20, '<li>Over-reliance on data at the expense of meaning.</li><li>Lack of empathy-based audience mapping.</li><li>Weak narrative hooks (starting with agendas).</li>', iif({totalScore} <= 35, '<li>Safe storytelling (avoiding the necessary tension).</li><li>Presenter-centric focus (making yourself the hero).</li><li>Ineffective handling of skeptical stakeholders.</li>', '<li>Over-polishing (losing raw authenticity).</li><li>Need for more concise, high-impact metaphors.</li><li>Mentoring others to build a culture of storytelling.</li>'))"
+  },
+  {
+   "name": "strategicGoal",
+   "expression": "iif({totalScore} <= 20, 'Goal: Shift from being a source of information to a source of inspiration by finding the human stake in every data point.', iif({totalScore} <= 35, 'Goal: Move from being a comfortable speaker to a courageous storyteller who uses tension to drive change.', 'Goal: Mastery of executive presence—using silence, nuance, and strategic narratives to lead through uncertainty.'))"
+  }
+ ]
+}
