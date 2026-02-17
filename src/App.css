@@ -13,12 +13,48 @@ code {
     monospace;
 }
 
-.App {
+.App, .learning-container {
   margin: 0 auto;
   padding: 2rem;
-  text-align: left;
   width: 80%;
   max-width: 1200px; /* Prevent over-stretching on huge screens */
+}
+
+@media (max-width: 768px) {
+  .App, .learning-container {
+      width: 95%;
+      padding: 1rem;
+  }
+
+  .results-actions {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .back-btn, .learn-btn {
+      width: 100%;
+      margin-right: 0;
+  }
+  
+  .learning-header h1 {
+      font-size: 1.8em;
+  }
+
+  h1 {
+      font-size: 1.8em; /* Global h1 reduction for mobile */
+  }
+
+  .card {
+     padding: 20px;
+  }
+
+  .learning-header {
+      margin-bottom: 20px;
+  }
+}
+
+.App {
+  text-align: left;
 }
 
 /* Back button (Review Answers) style */
