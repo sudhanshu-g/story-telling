@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "version": "1.0",
+    "author": "Strategic Storytelling Coach",
+    "description": "Content database for mapping assessment scores to detailed feedback."
+  },
+  "archetypes": {
+    "The Informational Expert": {
+      "definition": "The 'Safe Pair of Hands'. You value accuracy, thoroughness, and logic above all else.",
+      "explanation": "You view presentations primarily as a mechanism for transferring information. You believe that if the data is correct, the audience will reach the right conclusion on their own. While you are highly trusted for your expertise, your presentations often struggle to drive urgent decision-making because they lack an emotional 'hook' or a clear narrative arc.",
+      "strengths": ["High credibility", "Detail-oriented", "Logical flow"],
+      "blind_spots": ["Overwhelming audiences with data", "Lack of narrative tension", "Assuming facts equal persuasion"],
+      "famous_example": "The engineer who explains *how* the watch was built, rather than *why* time is running out."
+    },
+    "The Confident Communicator": {
+      "definition": "The 'Engaging Presenter'. You are comfortable in the spotlight and know how to hold a room.",
+      "explanation": "You have mastered the art of public speaking—you make eye contact, you smile, and you don't read off the slides. However, your stories may sometimes feel like 'fluff' to hard-nosed stakeholders. You might prioritize being liked over being challenged, or you might gloss over the necessary conflict required to justify a major strategic pivot.",
+      "strengths": ["Charismatic delivery", "Audience connection", "smooth transitions"],
+      "blind_spots": ["Prioritizing style over substance", "Avoiding hard truths", "Unclear call to action"],
+      "famous_example": "The sales leader who gets a lot of laughs but leaves the meeting without a signed contract."
+    },
+    "The Strategic Catalyst": {
+      "definition": "The 'Change Agent'. You use narrative as a precise tool to influence business outcomes.",
+      "explanation": "You understand that data is just the raw material; the story is the architecture. You are not afraid of tension—you use it to create urgency. You balance the emotional needs of the audience with the rational needs of the business. You don't just present slides; you guide the room through a psychological journey from 'Problem' to 'Resolution'.",
+      "strengths": ["Executive presence", "Outcome-oriented", "Mastery of silence and pacing"],
+      "blind_spots": ["Can appear calculating if not authentic", "May intimidate junior staff"],
+      "famous_example": "Steve Jobs introducing the iPhone—not as a piece of hardware, but as a resolution to the frustration of existing smartphones."
+    }
+  },
+  "skill_improvements": {
+    "opening": {
+      "skill": "The Narrative Hook",
+      "diagnosis": "You are likely starting with an Agenda or a pleasantry. This wastes the 'Golden Minute'—the first 60 seconds where attention is highest.",
+      "explanation": "The brain ignores predictable patterns. An agenda is predictable. To earn the right to be heard, you must disrupt the audience’s thought process immediately.",
+      "examples": {
+        "poor": "Good morning. Today I will cover the Q3 budget, followed by the hiring plan...",
+        "good": "In Q3, we lost our single largest client. I want to start by showing you exactly why they left."
+      },
+      "action_items": [
+        "Audit your last 3 decks. Delete the 'Agenda' slide.",
+        "Draft a 'Cold Open': Start with a startling statistic, a customer quote, or a provocative question.",
+        "Rule of Thumb: Do not say 'Hello' or 'Welcome' until *after* your hook."
+      ]
+    },
+    "conflict": {
+      "skill": "Embracing Tension",
+      "diagnosis": "You are avoiding the 'Inciting Incident'. You try to sanitize failures or gloss over problems.",
+      "explanation": "A story without conflict is just a brochure. Leaders trust people who admit reality. By highlighting the problem clearly, you position your solution as the necessary resolution.",
+      "examples": {
+        "poor": "We had some minor headwinds in Q1, but Q2 looks great.",
+        "good": "We missed the Q1 target because we bet on the wrong feature. Here is the data that proves it, and here is how we are pivoting."
+      },
+      "action_items": [
+        "Identify the 'Villain' in your presentation (e.g., Inefficiency, Churn, a Competitor).",
+        "Spend 20% of your time strictly defining the problem before offering a solution.",
+        "Use the phrase: 'The hard truth we need to face is...'"
+      ]
+    },
+    "hero": {
+      "skill": "Role Clarity",
+      "diagnosis": "You are making yourself or your team the Hero. This is 'The Braggart's Trap'.",
+      "explanation": "In a strategic story, the Customer is the Hero. They are the ones facing a challenge. You (and your product) are the 'Guide' (like Yoda) who gives them the tool to win.",
+      "examples": {
+        "poor": "We are the world's leading provider of X with 50 awards.",
+        "good": "Our customers are currently struggling to navigate X. We provide the compass they need."
+      },
+      "action_items": [
+        "Count the number of times you say 'We/I' vs 'You/ The Client'. Aim for a 1:1 ratio.",
+        "Rewrite your value proposition: 'We help [Hero] defeat [Villain] so they can achieve [Goal].'"
+      ]
+    },
+    "data": {
+      "skill": "Data Storytelling",
+      "diagnosis": "You are data-dumping. You expect the audience to do the mental work of finding the insight.",
+      "explanation": "Data is not the story; it is the evidence for the story. A chart should never leave the audience wondering 'So what?'",
+      "examples": {
+        "poor": "Here is a spreadsheet of our 12-month sales figures.",
+        "good": "This one spike in May represents the impact of our new pricing model."
+      },
+      "action_items": [
+        "The 5-Second Test: Show your slide to a stranger for 5 seconds. If they can't tell you the main point, simplify it.",
+        "Change every slide title from a description (e.g., 'Revenue Q3') to an assertion (e.g., 'Revenue dipped 10% due to supply chain issues')."
+      ]
+    },
+    "brevity": {
+      "skill": "Executive Agility",
+      "diagnosis": "You rely too heavily on your slides. If time is cut, you rush rather than condense.",
+      "explanation": "Senior leaders value time above all else. The ability to ditch the deck and deliver the 'Bottom Line Up Front' (BLUF) is a hallmark of executive presence.",
+      "examples": {
+        "poor": "Speed-reading 20 slides in 5 minutes.",
+        "good": "Closing the laptop and saying: 'The deck has the details, but the one decision we need to make today is X.'"
+      },
+      "action_items": [
+        "Create a 'One-Pager' summary for every deck you build.",
+        "Practice the 'Elevator Test': explain your strategy in the time it takes to ride from floor 1 to 10."
+      ]
+    },
+    "resistance": {
+      "skill": "Handling Objections",
+      "diagnosis": "You treat questions as interruptions or attacks.",
+      "explanation": "Skepticism is a sign of engagement. The 'Aikido' method involves moving *with* the resistance, validating it, and then redirecting it back to your narrative.",
+      "examples": {
+        "poor": "Let me finish the presentation, I'll answer that at the end.",
+        "good": "That is exactly the right question to ask. In fact, that risk is why we included phase 2 of this plan..."
+      },
+      "action_items": [
+        "Pre-mortem: List the 5 toughest questions you hope they don't ask.",
+        "Prepare a specific slide in the Appendix for each of those 5 questions."
+      ]
+    }
+  },
+  "strategic_goals": {
+    "The Informational Expert": {
+      "goal_statement": "From Information to Meaning",
+      "explanation": "Your current ceiling is that you are seen as a 'doer' or an analyst, not a leader. To rise, you must stop proving you are right and start proving you are relevant. You need to take the risk of adding your point of view to the data.",
+      "roadmap": [
+        "1: Focus on headlines. Stop labeling slides; start writing assertions.",
+        "2: Incorporate 'The User's Voice'. Start every meeting with a customer anecdote.",
+        "3: The 'So What?' Challenge. For every fact you present, force yourself to say '...and this matters because...'"
+      ]
+    },
+    "The Confident Communicator": {
+      "goal_statement": "From Presentation to Persuasion",
+      "explanation": "Your current ceiling is that you are 'good in the room' but may lack the gravitas to drive hard decisions. You need to trade some of your polish for grit. You need to show that you understand the stakes and the risks.",
+      "roadmap": [
+        "1: The 'Anti-Hero'. Share a personal or team failure to build authentic trust.",
+        "2: Structure over Style. Force yourself to use the 'Situation-Complication-Resolution' framework.",
+        "3: Data Anchoring. ensure every story is backed by a hard metric, so you aren't dismissed as just a 'storyteller'."
+      ]
+    },
+    "The Strategic Catalyst": {
+      "goal_statement": "From Persuasion to Legacy",
+      "explanation": "You have the skills. Your goal now is scale. You need to move from being the only good storyteller in the room to creating a 'culture of narrative' where your team can advocate for ideas as effectively as you do.",
+      "roadmap": [
+        "1: Mentorship. Stop reviewing your team's slides for typos; review them for narrative structure.",
+        "2: The 'Signature Story'. Develop a core company story that aligns with the 5-year vision and teach it to everyone.",
+        "3: Radical Brevity. Practice delivering 60-minute concepts in 10-minute narratives to board-level audiences."
+      ]
+    }
+  }
+}

@@ -126,7 +126,7 @@
   },
   {
    "name": "archetype",
-   "expression": "iif({totalScore} <= 20, 'The Subject Matter Expert', iif({totalScore} <= 35, 'The Polished Presenter', 'The Strategic Influencer'))"
+   "expression": "iif({totalScore} <= 20, 'The Informational Expert', iif({totalScore} <= 35, 'The Confident Communicator', 'The Strategic Catalyst'))"
   },
   {
    "name": "improvementList",
