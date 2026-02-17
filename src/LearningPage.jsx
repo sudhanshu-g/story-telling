@@ -40,6 +40,7 @@ const LearningPage = () => {
         <div className="learning-container">
             <header className="learning-header">
                 <h1>Your Narrative DNA: <span className="highlight">{archetypeKey}</span></h1>
+                
             </header>
             
             {archetypeData && (
@@ -110,6 +111,7 @@ const LearningPage = () => {
             )}
 
             <div className="actions-footer">
+                <h4>* The above explanations use examples of presentation skills, but the learnings can apply to all kinds of storytelling.</h4>
                 <button 
                   onClick={() => navigate('/', { 
                     state: { 
