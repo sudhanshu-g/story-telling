@@ -6,6 +6,7 @@ import 'survey-core/defaultV2.min.css';
 import surveyJson from '../question.json'; // Importing JSON directly
 import './App.css';
 import LearningPage from './LearningPage';
+import { trackEvent } from './telemetry';
 
 function SurveyComponent() {
   const navigate = useNavigate();
@@ -30,8 +31,22 @@ function SurveyComponent() {
   const [isCompleted, setIsCompleted] = useState(!!location.state?.isCompleted);
 
   useEffect(() => {
+    // Only track session start if not restoring state
+    if (!location.state?.surveyData && !isCompleted) {
+        trackEvent('Survey Session Start', { timestamp: new Date().toISOString() });
+    }
+  }, []); // Run once on mount
+
+  useEffect(() => {
     const handleComplete = (sender) => {
       setIsCompleted(true);
+      const archetype = sender.getVariable("archetype") || sender.data.archetype;
+      const totalScore = sender.getVariable("totalScore");
+      trackEvent('Survey Submitted', { 
+          archetype: archetype,
+          score: totalScore,
+          timestamp: new Date().toISOString()
+      });
     };
     if (!isCompleted) { // Only add listener if not already completed/restored
         survey.onComplete.add(handleComplete);
@@ -51,6 +66,16 @@ function SurveyComponent() {
         results.archetype = archetype;
     }
 
+    const score = survey.getVariable("totalScore");
+    if (score) {
+        results.totalScore = score;
+    }
+    trackEvent('Learn More Clicked', { 
+        archetype: archetype,
+        score: score,
+        timestamp: new Date().toISOString()
+    });
+
     // Pass survey data and completion state so we can restore it when coming back
     navigate('/learning', { 
         state: { 
@@ -65,6 +90,7 @@ function SurveyComponent() {
     survey.clear(false, true);
     survey.mode = 'edit'; // Ensure we go back to edit mode
     setIsCompleted(false);
+    trackEvent('Survey Session Start', { timestamp: new Date().toISOString(), type: 'restart' });
     // Clear history state so we don't restore on refresh?
     navigate('/', { replace: true, state: {} });
   }, [survey, navigate]);

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import details from '../details.json';
+import './LearningPage.css';
 
 const LearningPage = () => {
     const location = useLocation();
@@ -16,8 +17,8 @@ const LearningPage = () => {
         );
     }
 
-    // Determine Archetype
     const archetypeKey = results.archetype || 'The Informational Expert'; 
+    const totalScore = results.totalScore;
     const archetypeData = details.archetypes[archetypeKey];
     const strategicGoalData = details.strategic_goals[archetypeKey];
     const skillImprovementsData = details.skill_improvements;
@@ -39,8 +40,15 @@ const LearningPage = () => {
     return (
         <div className="learning-container">
             <header className="learning-header">
-                <h1>Your Narrative DNA: <span className="highlight">{archetypeKey}</span></h1>
-                
+                <div className="header-content">
+                    <h1>Your Narrative DNA: <span className="highlight">{archetypeKey}</span></h1>
+                    <button onClick={() => window.print()} className="print-btn" aria-label="Print results">
+                        🖨️ Print Results
+                    </button>
+                </div>
+                {totalScore !== undefined && (
+                    <h2 className="score-subtitle">Mastery Score: {totalScore} / 50</h2>
+                )}
             </header>
             
             {archetypeData && (

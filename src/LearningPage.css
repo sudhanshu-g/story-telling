@@ -1,0 +1,96 @@
+.score-subtitle {
+    font-size: 1.5em;
+    color: #646cff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.learning-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.print-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #495057;
+    font-weight: 500;
+}
+
+.print-btn:hover {
+    background-color: #e2e6ea;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+@media print {
+    .print-btn, .back-btn, .actions-footer button {
+        display: none !important;
+    }
+
+    .learning-container {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .learning-header {
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+        background: white !important;
+        color: black !important;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Ensure background colors for examples are printed */
+    .example.poor, .example.good {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        border: 1px solid #ccc;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black !important;
+    }
+
+    h1, h2, h3, h4 {
+        color: black !important;
+        page-break-after: avoid;
+    }
+}
