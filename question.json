@@ -118,7 +118,7 @@
    ]
   }
  ],
- "completedHtml": "<h3>Your Narrative DNA: {archetype}</h3><p>Total Mastery Score: <b>{totalScore} / 50</b></p><hr/><h4>Core Shortcomings Identified:</h4><ul>{improvementList}</ul><hr/><h4>Your Strategic Growth Goal:</h4><p><b>{strategicGoal}</b></p>",
+ "completedHtml": "<h3>Your Narrative DNA: {archetype}</h3><p>Total Mastery Score: <b>{totalScore} / 50</b></p><hr/><h4>Core Focus Areas:</h4><ul>{improvementList}</ul><hr/><h4>Your Strategic Growth Goal:</h4><p><b>{strategicGoal}</b></p>",
  "calculatedValues": [
   {
    "name": "totalScore",
